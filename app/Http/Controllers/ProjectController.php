@@ -14,7 +14,7 @@ class ProjectController extends Controller
     {
         $projects=Project::all();
 
-        return view('dashboard');
+        return view('/dashboard',compact("projects"));
     }
 
     /**
@@ -30,9 +30,9 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+/*         $request->validate([
 
-        ]);
+        ]); */
 
 
         $data=$request->all;
